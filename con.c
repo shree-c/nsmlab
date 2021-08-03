@@ -25,10 +25,11 @@ int main() {
         freq_mul_dif_mid_mean[i] = freq[i] * (pow((midpoint[i]- mean), 2));
         sum_freq_mul_dif_mid_mean += freq_mul_dif_mid_mean[i];
     }
+    printf("\nclassrange---midpoint---frequency---mid*freq---freq * (mid - mean)\n");
     for (int i = 0; class_hold[i] < upper_lim; i++) {
-        printf("%d----%d---%f---%f\n", class_hold[i], class_hold[i + 1], midpoint[i], freq[i]);
+        printf("%d----%d---%f---%f---%f---%f\n", class_hold[i], class_hold[i + 1], midpoint[i], freq[i], mid_mul_freq[i], freq_mul_dif_mid_mean[i]);
     }
     float variance = sum_freq_mul_dif_mid_mean / freq_sum;
     float std_div = sqrt(variance);
-    printf("varience = %f\t sd = %f\n", variance, std_div);
+    printf("varience = %f\t sd = %f, mean = %f\n", variance, std_div, mean);
 }

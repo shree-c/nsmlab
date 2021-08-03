@@ -35,4 +35,5 @@ int main() {
     float varience = sumfxdiffxsq / N;
     float std_div = sqrt(varience);
     printf("varience = %f\t standard deviation : %f\n", varience, std_div);
+    return 0;
 }
